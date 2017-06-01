@@ -181,7 +181,7 @@ public class Atendimento {
 				}else{
 					aux = inicio;
 					try{
-						arq = new FileWriter("C:\\Users\\316138870\\Desktop\\Arquivos\\Atendimento.txt");
+						arq = new FileWriter("c:\\Users\\316138870\\Desktop\\Arquivos\\Atendimento.txt");
 						gravar = new PrintWriter(arq);
 						
 						while(aux != null){
@@ -204,7 +204,7 @@ public class Atendimento {
 					yesOrNo = cDialog("DESEJA VER ARQUIVO?","MENSAGEM");
 					if(yesOrNo == JOptionPane.YES_OPTION){
 						try{
-							Process pro = Runtime.getRuntime().exec("cmd.exe /c c://Users//316138870//Desktop//Arquivos//Atendimento.txt");
+							Process pro = Runtime.getRuntime().exec("cmd.exe /c c:\\Users\\316138870\\Desktop\\Arquivos\\Atendimento.txt");
 						}
 						catch(Exception e){
 							escreva("Erro . . .");
