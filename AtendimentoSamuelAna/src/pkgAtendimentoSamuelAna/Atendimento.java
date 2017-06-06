@@ -33,7 +33,7 @@ public class Atendimento {
 			try{
 				op = Integer.parseInt(input(menu(),1));
 				if (op<1 || op >13){
-					mDialog("OP«√O INVALIDA!","MENSAGEM DO PROGRAMA");
+					mDialog("OPÔøΩÔøΩO INVALIDA!","MENSAGEM DO PROGRAMA");
 					break;
 				}
 			}catch (Exception e){
@@ -41,13 +41,13 @@ public class Atendimento {
 				break;
 			}
 			if (op==1){
-				int numero = Integer.parseInt(input("N⁄MERO DO CART√O:",0));
+				int numero = Integer.parseInt(input("NÔøΩMERO DO CARTÔøΩO:",0));
 				aux = inicio;
 				boolean numRepet = false;
 				while (aux != null){
 					if (aux.cartao == numero){
 						numRepet = true;
-						mDialog("Esse n˙mero do cart„o j· foi usado.\nFavor verificar!");
+						mDialog("Esse nÔøΩmero do cartÔøΩo jÔøΩ foi usado.\nFavor verificar!");
 						break;
 					}
 					aux = aux.prox;
@@ -70,11 +70,11 @@ public class Atendimento {
 			}
 			if (op==2){
 				if(inicio == null){
-					mDialog("N√O H¡ ATENDIMENTOS","MENSAGEM DO PROGRAMA");
+					mDialog("NÔøΩO HÔøΩ ATENDIMENTOS","MENSAGEM DO PROGRAMA");
 				}else{
 					JTextArea saida = new JTextArea(6,35);
 					JScrollPane scroll = new JScrollPane(saida);
-					saida.append("CART√O\t"+"NOME\t"+"SOBRENOME\t"+"VALOR\n");
+					saida.append("CARTÔøΩO\t"+"NOME\t"+"SOBRENOME\t"+"VALOR\n");
 					saida.append("----------------------------------------------------------------------\n");
 					aux = inicio;
 					while(aux != null){
@@ -88,15 +88,15 @@ public class Atendimento {
 			}
 			if (op==3){
 				if(inicio == null){
-					mDialog("N√O H¡ ATENDIMENTOS","MENSAGEM DO PROGRAMA");
+					mDialog("NÔøΩO HÔøΩ ATENDIMENTOS","MENSAGEM DO PROGRAMA");
 				}else{
-					mDialog("CART√O: "+inicio.cartao+" NOME: " +inicio.nome + " foi atendido(a)!","MENSAGEM DO PROGRAMA");
+					mDialog("CARTÔøΩO: "+inicio.cartao+" NOME: " +inicio.nome + " foi atendido(a)!","MENSAGEM DO PROGRAMA");
 					inicio = inicio.prox;
 				}
 			}
 			if (op ==4){
 				if(inicio == null){
-					mDialog("N√O H¡ ATENDIMENTOS", "MENSAGEM DO PROGRAMA");
+					mDialog("NÔøΩO HÔøΩ ATENDIMENTOS", "MENSAGEM DO PROGRAMA");
 				}else{
 					mDialog("* * O ATENDIMENTO FOI LIBERADO * *","MENSAGEM DO PROGRAMA");
 					inicio = null;
@@ -105,7 +105,7 @@ public class Atendimento {
 			
 			if (op ==5){
 				if(inicio == null){
-					mDialog("N√O H¡ ATENDIMENTOS","MENSAGEM DO PROGRAMA");
+					mDialog("NÔøΩO HÔøΩ ATENDIMENTOS","MENSAGEM DO PROGRAMA");
 				}else{
 					aux = inicio;
 					contador = 0;
@@ -115,7 +115,7 @@ public class Atendimento {
 						valorSomado = valorSomado + aux.valor;
 						aux = aux.prox;
 					}
-					mDialog("O ATENDIMENTO CONT…M: " + contador + "ELEMENTOS.\nVALOR TOTAL: " + valorSomado,"MENSAGEM DO PROGRAMA");
+					mDialog("O ATENDIMENTO CONTÔøΩM: " + contador + "ELEMENTOS.\nVALOR TOTAL: " + valorSomado,"MENSAGEM DO PROGRAMA");
 				
 				    
 				}
@@ -123,20 +123,20 @@ public class Atendimento {
 			}
 			if (op ==6){
 				if(inicio == null){
-					mDialog("N√O H¡ ATENDIMENTOS","MENSAGEM DO PROGRAMA");
+					mDialog("NÔøΩO HÔøΩ ATENDIMENTOS","MENSAGEM DO PROGRAMA");
 				}else{
-					filtro = Integer.parseInt(input("Informe o n˙mero do cart„o:"));
+					filtro = Integer.parseInt(input("Informe o nÔøΩmero do cartÔøΩo:"));
 					aux = inicio;
 					position = 1;
 					achou = false;
 					while(aux != null){
 						if(filtro == aux.cartao){
 							mDialog("DADOS DO CLENTE:\n"
-									+ "\nCART¬O: "+aux.cartao
+									+ "\nCARTÔøΩO: "+aux.cartao
 									+ "\nNOME: "+aux.nome
 									+ "\nSOBRENOME: "+aux.sobreNome
 									+ "\nVALOR: "+aux.valor
-									+ "\nPOSI«√O: "+position+"a. posiÁ„o","MENSAGEM DO PROGRAMA");
+									+ "\nPOSIÔøΩÔøΩO: "+position+"a. posiÔøΩÔøΩo","MENSAGEM DO PROGRAMA");
 							achou = true;
 							break;
 						}
@@ -144,13 +144,13 @@ public class Atendimento {
 						aux = aux.prox;
 					}
 					if(achou != true){
-						mDialog("O n˙mero do cart„o n„o foi encontrado!");
+						mDialog("O nÔøΩmero do cartÔøΩo nÔøΩo foi encontrado!");
 					}
 				}
 			}
 			if (op==7){
 				if(inicio == null){
-					mDialog("N√O H¡ ATENDIMENTOS","MENSAGEM DO PROGRAMA");
+					mDialog("NÔøΩO HÔøΩ ATENDIMENTOS","MENSAGEM DO PROGRAMA");
 				}else{
 					filtroNome = input("Nome do cliente:");
 					aux = inicio;
@@ -159,11 +159,11 @@ public class Atendimento {
 					while(aux != null){
 						if(filtroNome.equals(aux.nome)){
 							mDialog("DADOS DO CLENTE:\n"
-									+ "\nCART¬O: "+aux.cartao
+									+ "\nCARTÔøΩO: "+aux.cartao
 									+ "\nNOME: "+aux.nome
 									+ "\nSOBRENOME: "+aux.sobreNome
 									+ "\nVALOR: "+aux.valor
-									+ "\nPOSI«√O: "+position+"a. posiÁ„o","MENSAGEM DO PROGRAMA");
+									+ "\nPOSIÔøΩÔøΩO: "+position+"a. posiÔøΩÔøΩo","MENSAGEM DO PROGRAMA");
 							achou = true;
 							break;
 						}
@@ -171,13 +171,13 @@ public class Atendimento {
 						aux = aux.prox;
 					}
 					if(achou != true){
-						mDialog("Esse cliente n„o foi encontrado!");
+						mDialog("Esse cliente nÔøΩo foi encontrado!");
 					}
 				}
 			}
 			if (op==8){
 				if(inicio == null){
-					mDialog("N√O H¡ ATENDIMENTOS","MENSAGEM DO PROGRAMA");
+					mDialog("NÔøΩO HÔøΩ ATENDIMENTOS","MENSAGEM DO PROGRAMA");
 				}else{
 					aux = inicio;
 					try{
@@ -199,7 +199,7 @@ public class Atendimento {
 			}
 			if (op==9){
 				if(inicio == null){
-					mDialog("N√O H¡ ATENDIMENTOS","MENSAGEM DO PROGRAMA");
+					mDialog("NÔøΩO HÔøΩ ATENDIMENTOS","MENSAGEM DO PROGRAMA");
 				}else{
 					yesOrNo = cDialog("DESEJA VER ARQUIVO?","MENSAGEM");
 					if(yesOrNo == JOptionPane.YES_OPTION){
@@ -214,7 +214,7 @@ public class Atendimento {
 			}
 			if (op==10){
 				if(inicio == null){
-					mDialog("N√O H¡ ATENDIMENTOS","MENSAGEM DO PROGRAMA");
+					mDialog("NÔøΩO HÔøΩ ATENDIMENTOS","MENSAGEM DO PROGRAMA");
 				}else{
 					filtroFloat = Float.parseFloat(input("FILTRAR ATENDIMENTOS PARA VALORES SUPERIORES A:"));
 					aux = inicio;
@@ -222,7 +222,7 @@ public class Atendimento {
 					achou = false;
 					JTextArea saida = new JTextArea(6,35);
 					JScrollPane scroll = new JScrollPane(saida);
-					saida.append("CART√O\t"+"NOME\t"+"SOBRENOME\t"+"VALOR\n");
+					saida.append("CARTÔøΩO\t"+"NOME\t"+"SOBRENOME\t"+"VALOR\n");
 					saida.append("--------------------------------------------------------------------------\n");
 					aux = inicio;
 					while(aux != null){
@@ -234,32 +234,40 @@ public class Atendimento {
 						aux = aux.prox;
 					}
 					if(achou != true){
-						mDialog("O n˙mero do cart„o n„o foi encontrado!");
+						mDialog("O n√∫mero do cart√£o n√£o foi encontrado!");
 					}else{
 						JOptionPane.showMessageDialog(null, scroll, "ATENDIMENTOS COM VALORES SUPERIORES A: "+filtroFloat,
 								JOptionPane.INFORMATION_MESSAGE);
 					}
 				}
 			}
-			if(op==11){
-				if(inicio == null){
-					mDialog("N√O H¡ ATENDIMENTOS","MENSAGEM DO PROGRAMA");
-				}else{
-					JTextArea saida = new JTextArea(8,35);
-					JScrollPane scroll = new JScrollPane(saida);
-					saida.append("NOME\t"+"ENDERE«O\t"+"PROX\n");
-					saida.append("--------------------------------------------------------------------------\n");
-					aux = inicio;
-					while(aux.prox != null){
-						saida.append(aux.nome + "\t" + aux.hashCode() + "\t" + aux.prox.hashCode() +"\n");
-						aux = aux.prox;
-					}
-					saida.append(aux.nome + "\t" + aux.hashCode() + "\t" + "fim" +"\n");
-					JOptionPane.showMessageDialog(null, scroll, "CONSULTAR DADOS DO ATENDIMENTO",
-							JOptionPane.INFORMATION_MESSAGE);
+			if (op == 11) {
+				if (inicio == null) {
+					mDialog("N√ÉO H√Å ATENDIMENTOS","MENSAGEM DO PROGRAMA");
+				} else {
+				aux = inicio;
+				boolean rep = false;
+				JTextArea saida = new JTextArea(6, 35);// HEIGHT X WIDHT
+				JScrollPane scroll = new JScrollPane(saida);
+				saida.append("NOME\t" + "ENDERE√áO\t" + "PROX\t");
+				saida.append("\n===============================================\n");
+				while (aux != null) {
+				// saida.append(aux.nome + "\t" + aux.hashCode() + "\t"
+				// + aux.prox.hashCode() + "\n");
+				if(aux.prox != null){
+				saida.append(aux.nome + "\t" + aux.hashCode() + "\t" + aux.prox.hashCode() + "\n");
+				}
+				else if (aux.prox == null){
+				saida.append(aux.nome + "\t" + aux.hashCode() + "\t" + " fim" + "\n");
+				}
+				aux = aux.prox;
+				}
+
+				JOptionPane.showMessageDialog(null, scroll, "CONSULTAR DADOS DO ATENDIMENTO",
+				JOptionPane.INFORMATION_MESSAGE);
+				}
 				}
 				
-			}
 			if(op==12){
 				JTextArea saida = new JTextArea(10,35);
 				JScrollPane scroll = new JScrollPane(saida);
@@ -267,7 +275,7 @@ public class Atendimento {
 				saida.append("--------------------------------------------------------------------\n");
 				saida.append("Copyright(c) Delta Labs Ltda\n");
 				saida.append("Programadores: Ana Elisa Renault e Samuel Cleto\n");
-				saida.append("Vers„o 1.0\n");
+				saida.append("VersÔøΩo 1.0\n");
 				saida.append("Data: Junho de 2017\n");
 				JOptionPane.showMessageDialog(null, scroll, "SOBRE O PROGRAMA",
 						JOptionPane.INFORMATION_MESSAGE);
@@ -278,18 +286,18 @@ public class Atendimento {
 		
 	}
 	private static String menu(){
-		String menu = "MENU DE OP«’ES\n"
+		String menu = "MENU DE OPÔøΩÔøΩES\n"
 				+ "1 - Recepcionar cliente\n"
 				+ "2 - Consultar clientes a serem atendidos\n"
 				+ "3 - Atender cliente\n"
 				+ "4 - Liberar todos os clientes\n"
 				+ "5 - Verificar quatidade de clientes a atender\n"
-				+ "6 - Localizar cliente por n˙mero\n"
+				+ "6 - Localizar cliente por nÔøΩmero\n"
 				+ "7 - Localizar cliente por nome\n"
-				+ "8 - Emitir relatÛrio de cliente\n"
-				+ "9 - Ver relatÛrio de clientes\n"
+				+ "8 - Emitir relatÔøΩrio de cliente\n"
+				+ "9 - Ver relatÔøΩrio de clientes\n"
 				+ "10 - Filtrar clientes por valor\n"
-				+ "11 - Ver endereÁos hash\n"
+				+ "11 - Ver endereÔøΩos hash\n"
 				+ "12 - Sobre\n"
 				+ "13 - Sair";
 		return menu;
